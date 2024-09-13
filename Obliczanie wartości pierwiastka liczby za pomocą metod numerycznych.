@@ -1,0 +1,10 @@
+def oblicz_pierwiastek_kwadratowy(liczba, epsilon):
+    przyblizenie = liczba / 2
+    while abs(przyblizenie**2 - liczba) > epsilon:
+        przyblizenie = (przyblizenie + liczba / przyblizenie) / 2
+    return przyblizenie
+
+liczba = 1000000
+epsilon = 0.001
+wynik = oblicz_pierwiastek_kwadratowy(liczba, epsilon)
+print(f"Pierwiastek kwadratowy liczby {liczba} wynosi: {wynik}")
